@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>UUID Gen</title>
+    <link rel="icon" href="./assets/favicon.png" />
     <script src="./uuidgen.js"></script>
     <link
       crossorigin="anonymous"
@@ -19,9 +20,21 @@
       async
       src="//gc.zgo.at/count.js"
     ></script>
+    <style>
+      .f8HPgB {
+        text-decoration: underline;
+      }
+    </style>
   </head>
-  <body class="m-4 text-bg-dark">
-    <h1>UUID Generator</h1>
+  <body class="m-3 text-bg-dark">
+    <noscript>
+      <h1>You need JavaScript for this.</h1>
+    </noscript>
+    <div class="d-flex">
+      <img src="./assets/icon.png" width="64" height="64" />
+      <h1 class="ms-4">UUID Gen</h1>
+    </div>
+    <hr />
     <button
       class="btn btn-secondary"
       data-bs-target="#nr0MY3"
@@ -29,17 +42,18 @@
     >
       Settings
     </button>
-    <button class="btn btn-secondary" onclick="copy()">Copy</button>
-    <button class="btn btn-primary" onclick="generate()">Generate UUID</button
-    ><br /><br />
+    <button class="btn btn-secondary invisible" id="ti2W8R" onclick="copy()">
+      Copy
+    </button>
+    <button class="btn btn-primary" onclick="generate()">Generate UUID</button>
+    <hr />
     <div id="FyAy4c">
       Hello! Are you a <b>new user?</b> Thanks for coming!
       <br />
       Or, are you an <b>old user</b> that cleared your cache and cookies? Some
       of your settings have been reset to defaults.
+      <hr />
     </div>
-    <br />
-    <br />
     <textarea
       class="form-control"
       disabled
@@ -48,8 +62,8 @@
       rows="5"
     ></textarea
     ><br /><br />
-    <p><a href="./changelog/1.1">v1.1</a></p>
-    <div class="fade modal" aria-hidden="true" id="nr0MY3" tabindex="-1">
+    <p><a href="./changelog">v2.0</a></p>
+    <div class="modal fade" aria-hidden="true" id="nr0MY3" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content text-dark">
           <div class="modal-header">
@@ -62,15 +76,39 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div>
-              <button class="btn btn-primary" onclick="toggleDisplayMode()">
-                Toggle display mode
-              </button>
+            <h2>Display mode</h2>
+            <button
+              class="btn btn-primary rounded-pill"
+              onclick="toggleDisplayMode()"
+            >
+              Toggle display mode
+            </button>
+            <p>We have Dark and Light available right now.</p>
+            <hr />
+            <h2>General settings</h2>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                onclick="toggleAutoGen()"
+                id="6tCJwn"
+              />
+              <label class="form-check-label"
+                >Automatically generate UUID on next use
+                <span
+                  data-bs-toggle="tooltip"
+                  class="f8HPgB"
+                  data-bs-title="When you next use UUID Gen, and further instances until you switch this off, a UUID will automatically generate."
+                  >(?)</span
+                ></label
+              >
             </div>
           </div>
           <div class="modal-footer">
+            Changes will save automatically
+            <div class="ms-3"></div>
             <button
-              class="btn btn-secondary"
+              class="btn btn-secondary rounded-pill"
               data-bs-dismiss="modal"
               type="button"
             >

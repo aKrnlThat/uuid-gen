@@ -12,14 +12,34 @@
       crossorigin="anonymous"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     ></script>
+    <meta
+      http-equiv="refresh"
+      content="3; https://akrnlthat.github.io/uuid-gen/changelog"
+    />
+    <script>
+      let e = 3;
+      setInterval(function () {
+        if (e !== 0) {
+          e = e - 1;
+          document.querySelector("#KSoX8p").innerHTML = e.toString();
+        }
+      }, 1e3);
+    </script>
   </head>
   <body class="m-4 text-bg-dark">
-    <h1>Changelog | v1.1</h1>
+    <div class="spinner-border" role="status"></div>
+    <hr />
+    <span class="fs-1">Redirecting in <b id="KSoX8p">3</b> seconds...</span>
+    <noscript>
+      <span class="fs-1">Redirecting in <b>3</b> seconds...</span>
+      <p>This timer won't update due to you not having JavaScript.</p>
+      <p>
+        If this is not redirecting, try
+        <a href="../changelog">clicking here</a>.
+      </p>
+    </noscript>
     <p>
-      Welcome to v1.1 of UUID Gen. We've fixed a bug causing dark mode to be
-      applied when Light mode is toggled, when refreshing. We've also added
-      texts for new user welcome and cache and cookie deletion notice.
+      If this is not redirecting, try <a href="../changelog">clicking here</a>.
     </p>
-    <a class="btn btn-primary" href="../index.html">Back</a>
   </body>
 </html>
