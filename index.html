@@ -29,12 +29,24 @@
   <body class="m-3 text-bg-dark">
     <noscript>
       <h1>You need JavaScript for this.</h1>
+      <hr />
     </noscript>
     <div class="d-flex">
       <img src="./assets/icon.png" width="64" height="64" />
       <h1 class="ms-4">UUID Gen</h1>
     </div>
     <hr />
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          onclick="toggleHyphens()"
+          id="YU5rX9"
+          checked="true"
+        />
+        <label class="form-check-label">Hyphens</label>
+      </div>
+      <br>
     <button
       class="btn btn-secondary"
       data-bs-target="#nr0MY3"
@@ -45,7 +57,7 @@
     <button class="btn btn-secondary invisible" id="ti2W8R" onclick="copy()">
       Copy
     </button>
-    <button class="btn btn-primary" onclick="generate()">Generate UUID</button>
+    <button class="btn btn-primary" onclick="generate()" id="Fv7mkq">Generate UUID</button>
     <hr />
     <div id="FyAy4c">
       Hello! Are you a <b>new user?</b> Thanks for coming!
@@ -62,7 +74,7 @@
       rows="5"
     ></textarea
     ><br /><br />
-    <p><a href="./changelog">v2.0</a></p>
+    <p><a href="./changelog">v2.1-features</a></p>
     <div class="modal fade" aria-hidden="true" id="nr0MY3" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content text-dark">
@@ -99,6 +111,30 @@
                   data-bs-toggle="tooltip"
                   class="f8HPgB"
                   data-bs-title="When you next use UUID Gen, and further instances until you switch this off, a UUID will automatically generate."
+                  >(?)</span
+                ></label
+              >
+            </div>
+            <h4>Force full randomness</h4>
+            <div class="alert alert-warning">
+              By toggling this on, <b>you cannot disable hyphens</b> as it
+              doesn't use the secure-context only
+              <code>crypto.randomUUID()</code> JavaScript function to generate
+              without hyphens.
+            </div>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                onclick="toggleForceRandom()"
+                id="Gn7TIy"
+              />
+              <label class="form-check-label"
+                >Force full randomness
+                <span
+                  data-bs-toggle="tooltip"
+                  class="f8HPgB"
+                  data-bs-title="Force the more random crypto.randomUUID function to be used, to generate more random UUIDs."
                   >(?)</span
                 ></label
               >
