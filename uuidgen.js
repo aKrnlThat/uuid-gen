@@ -31,8 +31,8 @@ function getCookie(e) {
 function setCookie(e, t, o) {
   const n = new Date();
   n.setTime(n.getTime() + o * 24 * 60 * 60 * 1e3);
-  const c = "expires=" + n.toUTCString();
-  document.cookie = e + "=" + t + ";" + c + ";path=/";
+  const i = "expires=" + n.toUTCString();
+  document.cookie = e + "=" + t + ";" + i + ";path=/";
 }
 function generate() {
   const e = document.querySelector("#CCBz1i");
@@ -61,6 +61,9 @@ function generateNoHyphens() {
           (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (+e / 4)))
         ).toString(16)
       );
+    const e = document.querySelector("#ti2W8R");
+    e.classList.add("visible");
+    e.classList.remove("invisible");
   } else {
     alert(
       "Cannot generate: You have Force full randomness enabled and cannot use the fallback due to disabling hyphens."
