@@ -1,1 +1,1 @@
-**We do not accept PRs at the moment, but you are allowed to fork this project and whip it up, and you can report issues through the issue tracker.**
+# UUID Gen

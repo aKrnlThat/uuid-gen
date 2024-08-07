@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Issues | UUID Gen</title>
+    <link rel="icon" href="./assets/favicon.png" />
+    <script src="./uuidgen.js"></script>
+    <link
+      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js "
+      crossorigin="anonymous"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    ></script>
+    <script
+      data-goatcounter="https://akt.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
+  </head>
+  <body class="m-3 text-bg-dark">
+    <p>
+      Here you can find common website issues and how to resolve them, and also
+      the issues that have been found and will be fixed later.
+    </p>
+    <h1>Common issues (not our fault)</h1>
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Dark mode isn't that dark or looks awful!
+          </button>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            Some other extensions such as Dark Reader may be impacting the dark
+            mode. Try turning them off. Also, the accordions (like this one and
+            the one in the changelog) use Bootstrap, which background classes
+            will slightly break accordions.
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h1>Known issues (fixing later)</h1>
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne1"
+            aria-expanded="true"
+            aria-controls="collapseOne1"
+          >
+            Toggles I've switched on aren't checked upon reload
+          </button>
+        </h2>
+        <div
+          id="collapseOne1"
+          class="accordion-collapse collapse show"
+        >
+          <div class="accordion-body">
+            Technically, <b>settings still apply</b>, for now you have to make a
+            mental note while the issue is diagnosed.
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <a href="./" class="btn btn-primary rounded-pill">Back</a>
+  </body>
+</html>
